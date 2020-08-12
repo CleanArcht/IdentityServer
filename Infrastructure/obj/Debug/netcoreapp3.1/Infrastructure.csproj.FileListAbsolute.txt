@@ -1,0 +1,8 @@
+/Users/ricardo/Dev/Cursos/IdentityServer/Infrastructure/obj/Debug/netcoreapp3.1/Infrastructure.csprojAssemblyReference.cache
+/Users/ricardo/Dev/Cursos/IdentityServer/Infrastructure/obj/Debug/netcoreapp3.1/Infrastructure.AssemblyInfoInputs.cache
+/Users/ricardo/Dev/Cursos/IdentityServer/Infrastructure/obj/Debug/netcoreapp3.1/Infrastructure.AssemblyInfo.cs
+/Users/ricardo/Dev/Cursos/IdentityServer/Infrastructure/bin/Debug/netcoreapp3.1/Infrastructure.deps.json
+/Users/ricardo/Dev/Cursos/IdentityServer/Infrastructure/bin/Debug/netcoreapp3.1/Infrastructure.dll
+/Users/ricardo/Dev/Cursos/IdentityServer/Infrastructure/bin/Debug/netcoreapp3.1/Infrastructure.pdb
+/Users/ricardo/Dev/Cursos/IdentityServer/Infrastructure/obj/Debug/netcoreapp3.1/Infrastructure.dll
+/Users/ricardo/Dev/Cursos/IdentityServer/Infrastructure/obj/Debug/netcoreapp3.1/Infrastructure.pdb
