@@ -37,6 +37,6 @@ Database
 
 ## Requirements
 
-## Additional Documentation
+## Additional Information
 
 - For more information <https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-api-authorization?view=aspnetcore-3.0#example-deploy-to-azure-websites>

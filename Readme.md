@@ -28,10 +28,6 @@ Database
 - `dotnet ef database update -s WebUI/`
 - `dotnet ed database drop -s WebUI/`
 
-## Requirements
+## ## Additional Information
 
-## Extras
-
-- dotnet ef migrations add Initial -p Src/Infrastructure -s Src/WebUi -o Persistence/Migrations
-
-For more information <https://github.com/jasontaylordev/CleanArchitecture>
+- CleanArchitecture <https://github.com/jasontaylordev/CleanArchitecture>
