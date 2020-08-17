@@ -1,24 +1,37 @@
 # IdentityServer
 
-## Migrations ( All Cmds in the root of the repository)
+This Project is for a least trying to understand how and what u need to IdentityServer Work using Clean Architecture
 
-    Requirements 
+## Technologies
+
+- .NET Core 3.1
+- ASP .NET Core 3.1
+- Entity Framework Core 3.1
+- FluentValidation
+
+## Migrations ###( All Cmds in the root of the repository)
+
+    Requirements
     * dotnet new tool-manifest
     * dotnet tool install dotnet-ef
 
-    Add Migration 
-    * dotnet ef migrations add Initial -p Infrastructure/ -s WebUi/ -o Persistence/Migrations
+Add Migration
 
+- `dotnet ef migrations add Initial -p Infrastructure/ -s WebUi/ -o Persistence/Migrations`
 
-    Remove Migration 
-    * dotnet ef migrations remove -p Infrastructure/ -s WebUi/ 
+Remove Migration
 
-    Database
-    dotnet ef database update -s WebUI/ 
-    dotnet ed database drop -s WebUI/ 
+- `dotnet ef migrations remove -p Infrastructure/ -s WebUi/`
+
+Database
+
+- `dotnet ef database update -s WebUI/`
+- `dotnet ed database drop -s WebUI/`
 
 ## Requirements
 
 ## Extras
 
-* dotnet ef migrations add Initial -p Src/Infrastructure -s Src/WebUi -o Persistence/Migrations
+- dotnet ef migrations add Initial -p Src/Infrastructure -s Src/WebUi -o Persistence/Migrations
+
+For more information <https://github.com/jasontaylordev/CleanArchitecture>

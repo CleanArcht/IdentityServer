@@ -1,11 +1,15 @@
-using Infrastructure;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Infrastructure;
 
 namespace WebUI
 {
@@ -21,11 +25,12 @@ namespace WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            // Adding DepInj
+            // Implementation for Authentication and Authorization
             services.AddInfrastructure(Configuration);
-            
+
             services.AddControllersWithViews();
+
+            services.AddRazorPages();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -39,6 +44,7 @@ namespace WebUI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -56,11 +62,22 @@ namespace WebUI
 
             app.UseRouting();
 
+            // Who are you?
+            // The authentication middleware that is responsible for validating the request credentials and setting the user on the request context.
+            app.UseAuthentication();
+
+            // The IdentityServer middleware that exposes the OpenID Connect endpoints
+            app.UseIdentityServer();
+
+            // Are u allow? 
+            app.UseAuthorization();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
 
             app.UseSpa(spa =>

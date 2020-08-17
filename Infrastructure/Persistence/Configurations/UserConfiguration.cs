@@ -11,11 +11,8 @@ namespace Infrastructure.Persistence.Configurations
         public void Configure ( EntityTypeBuilder<ApplicationUser> builder )
         {
         
-            builder.Property( u => u.UserName)
-            .IsRequired();
-
             builder.Property( u => u.Name)
-            .IsRequired()
+            // .IsRequired()
             .HasMaxLength(128);
 
             builder.Property( u => u.PhotoUrl).HasMaxLength(256);
