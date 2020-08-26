@@ -35,8 +35,18 @@ Database
 - `dotnet ef database update -s WebUI/`
 - `dotnet ed database drop -s WebUI/`
 
+## Scafollding
+
+dotnet aspnet-codegenerator identity -dc Infrastructure.Persistence.ApplicationDbContext --files "Account.Register;Account.Login;Account.Logout"
+
+More Information
+    * <https://stackoverflow.com/questions/31246255/how-to-get-the-username-not-email-inside-loginpartial-cshtml-asp-net-ident>
+
+    * <https://www.youtube.com/watch?v=CzRM-hOe35o&t=15s>
+
 ## Requirements
 
 ## Additional Information
 
 - For more information <https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-api-authorization?view=aspnetcore-3.0#example-deploy-to-azure-websites>
+- Scaffolding <https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-3.1&tabs=netcore-cli#scaffold-identity-into-an-mvc-project-with-authorization>
